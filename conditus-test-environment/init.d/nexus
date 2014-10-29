@@ -1,0 +1,6 @@
+﻿#!/bin/bash
+
+. /etc/profile.d/sysenv.sh
+
+cd $NEXUS_HOME/bin
+./nexus $1
