@@ -1,0 +1,5 @@
+{
+    "scmUrl" : "scm:svn:http://localhost:8080/svn/conditus/tycho/trunk",
+    "checkoutDir" : "./target/tycho",
+    "nextDevVersion" : "1.1.0-SNAPSHOT"
+}
