@@ -1,4 +1,4 @@
-package com.github.skosmalla.conditus.tycho.step
+package com.github.skosmalla.conditus.maven.step
 
 import com.github.skosmalla.conditus.ConditusStep
 import com.github.skosmalla.conditus.OsSpecifics
@@ -8,7 +8,7 @@ import com.github.skosmalla.conditus.CommandLineExecutor
  * @author skosmalla
  * @since 11.06.14
  */
-class ScmTagTychoStep implements ConditusStep{
+class ScmTagStep implements ConditusStep{
 
     String tagName
 
@@ -17,7 +17,7 @@ class ScmTagTychoStep implements ConditusStep{
      *
      * @param tagName
      */
-    ScmTagTychoStep(String tagName) {
+    ScmTagStep(String tagName) {
        this.tagName = tagName
     }
 

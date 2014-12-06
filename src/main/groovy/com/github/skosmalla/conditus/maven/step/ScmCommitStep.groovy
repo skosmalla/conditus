@@ -1,4 +1,4 @@
-package com.github.skosmalla.conditus.tycho.step
+package com.github.skosmalla.conditus.maven.step
 
 import com.github.skosmalla.conditus.ConditusStep
 import com.github.skosmalla.conditus.OsSpecifics
@@ -8,11 +8,11 @@ import com.github.skosmalla.conditus.CommandLineExecutor
  * @author skosmalla
  * @since 11.06.14
  */
-class ScmCommitTychoStep implements ConditusStep{
+class ScmCommitStep implements ConditusStep{
 
     String commitMessage
 
-    ScmCommitTychoStep(String commitMessage) {
+    ScmCommitStep(String commitMessage) {
         this.commitMessage = commitMessage
     }
 

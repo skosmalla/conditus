@@ -1,0 +1,6 @@
+{
+    "scmUrl" : "scm:svn:http://localhost:8000/svn/conditus/maven-sample-project/trunk",
+    "checkoutDir" : "target/maven-project",
+    "releaseVersion" : "1.0.0",
+    "nextDevVersion" : "1.1.0-SNAPSHOT",
+}

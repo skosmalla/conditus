@@ -1,4 +1,4 @@
-package com.github.skosmalla.conditus.step
+package com.github.skosmalla.conditus.maven.step
 
 import com.github.skosmalla.conditus.ConditusStep
 import com.github.skosmalla.conditus.CommandLineExecutor

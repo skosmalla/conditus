@@ -1,7 +1,7 @@
 package com.github.skosmalla.conditus
 
-import com.github.skosmalla.conditus.step.ScmCheckoutStep
-import com.github.skosmalla.conditus.tycho.TychoReleaseWorkflow
+import com.github.skosmalla.conditus.maven.step.ScmCheckoutStep
+import com.github.skosmalla.conditus.maven.MavenReleaseWorkflow
 
 /**
  * @author skosmalla
@@ -19,7 +19,7 @@ class Conditus {
         for (def projectInfo : projectsInformation) {
             new ScmCheckoutStep(projectInfo.scmUrl, projectInfo.checkoutDir).execute()
             CommandLineExecutor.setInstance(new CommandLineExecutor((projectInfo.checkoutDir)))
-            def tychoWorkflow = new TychoReleaseWorkflow(projectInfo)
+            def tychoWorkflow = new MavenReleaseWorkflow(projectInfo)
             tychoWorkflow.execute()
         }
 

@@ -1,4 +1,4 @@
-package com.github.skosmalla.conditus.tycho.step
+package com.github.skosmalla.conditus.maven.step
 
 import com.github.skosmalla.conditus.ConditusStep
 import com.github.skosmalla.conditus.CommandLineExecutor
@@ -8,10 +8,10 @@ import com.github.skosmalla.conditus.OsSpecifics
  * @author skosmalla
  * @since 11.06.14
  */
-class SetVersionTychoStep implements ConditusStep{
+class SetVersionStep implements ConditusStep{
     String newVersion
 
-    SetVersionTychoStep(String newVersion) {
+    SetVersionStep(String newVersion) {
         this.newVersion = newVersion
     }
 

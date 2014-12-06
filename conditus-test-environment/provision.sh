@@ -45,7 +45,7 @@ cd /home/vagrant
 # Update System Environment Variable
 touch /etc/profile.d/sysenv.sh
 
-echo 'export NEXUS_HOME=/home/vagrant/nexus/nexus-2.10.0-02' >> /etc/profile.d/sysenv.sh
+echo 'export NEXUS_HOME=/home/vagrant/nexus/nexus-2.11.0-02' >> /etc/profile.d/sysenv.sh
 echo 'export M2_HOME=/home/vagrant/apache-maven-3.2.1' >> /etc/profile.d/sysenv.sh
 echo 'export SONAR_HOME=/home/vagrant/sonarqube/sonarqube-4.3' >>  /etc/profile.d/sysenv.sh
 echo 'export RUN_AS_USER=vagrant' >> /etc/profile.d/sysenv.sh

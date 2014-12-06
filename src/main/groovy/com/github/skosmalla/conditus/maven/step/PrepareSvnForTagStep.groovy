@@ -1,4 +1,4 @@
-package com.github.skosmalla.conditus.step
+package com.github.skosmalla.conditus.maven.step
 
 import com.github.skosmalla.conditus.CommandLineExecutor
 import com.github.skosmalla.conditus.OsSpecifics
@@ -25,7 +25,7 @@ class PrepareSvnForTagStep extends PrepareScmStep {
     }
 
     private void createTagFolder(String tagUrl) {
-        def command = OsSpecifics.getOsName().commandLinePrefix + "svn mkdir " + tagUrl + " -m \"create tags folder\""
+        String[] command = [OsSpecifics.getOsName().commandLinePrefix + "svn","mkdir", tagUrl,"-m \"create tags folder\""]
         CommandLineExecutor.getInstance().executeCommand(command)
 
         println("Create path " + tagUrl)
