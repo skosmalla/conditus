@@ -16,11 +16,16 @@ class Conditus {
         def projectInfoParser = new ProjectInformationParser()
         def projectsInformation = projectInfoParser.parse(options.jsonFile)
 
+        if(options.validateJsonFile) {
+            println("Given JSON file is syntactically correct.")
+            return
+        }
+
         for (def projectInfo : projectsInformation) {
             new ScmCheckoutStep(projectInfo.scmUrl, projectInfo.checkoutDir).execute()
             CommandLineExecutor.setInstance(new CommandLineExecutor((projectInfo.checkoutDir)))
-            def tychoWorkflow = new MavenReleaseWorkflow(projectInfo)
-            tychoWorkflow.execute()
+            def mavenWorkflow = new MavenReleaseWorkflow(projectInfo)
+            mavenWorkflow.execute()
         }
 
 
