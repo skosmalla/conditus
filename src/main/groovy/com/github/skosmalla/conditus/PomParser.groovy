@@ -81,4 +81,8 @@ class PomParser {
             return XmlUtil.serialize(doc as GPathResult)
         }
     }
+
+    String getParentVersion() {
+        project.parent.version
+    }
 }

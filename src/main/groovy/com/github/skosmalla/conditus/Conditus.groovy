@@ -1,12 +1,9 @@
 package com.github.skosmalla.conditus
 
-import com.github.skosmalla.conditus.maven.step.ScmCheckoutStep
 import com.github.skosmalla.conditus.maven.MavenReleaseWorkflow
+import com.github.skosmalla.conditus.maven.step.ScmCheckoutStep
 
-/**
- * @author skosmalla
- * @since 03.07.14
- */
+
 class Conditus {
 
     static void main(String... args) {

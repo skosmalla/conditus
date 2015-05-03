@@ -43,4 +43,18 @@ class PomParserTest {
 
         assert pomParser.getArtifactVersion() == '1.0.0-SNAPSHOT'
     }
+
+    @Test
+    void getParentVersion(){
+        PomParser pomParser = new PomParser(Paths.get('./src/test/resources/pom-parent-version.xml'))
+
+        assert pomParser.getParentVersion() == '2.0.0-SNAPSHOT'
+    }
+
+    @Test
+    void getParentVersion_noParentExist(){
+        PomParser pomParser = new PomParser(Paths.get('./src/test/resources/pom-scm-test.xml'))
+
+        assert pomParser.getParentVersion() == ""
+    }
 }

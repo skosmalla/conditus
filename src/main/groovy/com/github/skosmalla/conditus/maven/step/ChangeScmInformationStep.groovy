@@ -2,15 +2,12 @@ package com.github.skosmalla.conditus.maven.step
 
 import com.github.skosmalla.conditus.ConditusStep
 import com.github.skosmalla.conditus.PomParser
-import com.github.skosmalla.conditus.domain.ScmInformation
 import com.github.skosmalla.conditus.ScmUrlUtil
+import com.github.skosmalla.conditus.domain.ScmInformation
 
 import java.nio.file.Path
 
-/**
- * @author skosmalla
- * @since 11.06.14
- */
+
 class ChangeScmInformationStep implements ConditusStep{
 
 

@@ -1,12 +1,9 @@
 package com.github.skosmalla.conditus.maven.step
 
-import com.github.skosmalla.conditus.domain.ScmProvider
 import com.github.skosmalla.conditus.ScmUrlUtil
+import com.github.skosmalla.conditus.domain.ScmProvider
 
-/**
- * @author skosmalla
- * @since 11.06.14
- */
+
 class PrepareScmForTagStepFactory {
 
     static PrepareScmStep getInstance(String scmUrl) {

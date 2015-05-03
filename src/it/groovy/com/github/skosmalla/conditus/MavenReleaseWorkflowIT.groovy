@@ -1,13 +1,12 @@
 package com.github.skosmalla.conditus
 
+import com.github.skosmalla.conditus.exception.ConditusValidationException
 import org.junit.Test
 
 import java.nio.file.Files
 import java.nio.file.Paths
 
-/**
- * Created by sandra.kosmalla on 25.02.14.
- */
+
 class MavenReleaseWorkflowIT {
 
 
@@ -20,5 +19,12 @@ class MavenReleaseWorkflowIT {
         assert httpConnection.getResponseCode() == HttpURLConnection.HTTP_OK
         httpConnection = (HttpURLConnection) new URL("http://localhost:8001/nexus/content/repositories/releases/com/github/skosmalla/conditus/maven-sample-project/1.0.0/maven-sample-project-1.0.0.pom").openConnection()
         assert httpConnection.getResponseCode() == HttpURLConnection.HTTP_OK
+    }
+
+    @Test (expected = ConditusValidationException.class)
+    void parentDependencyHasSnapshotVersion(){
+        Conditus.main("-jsonFile", "./src/it/resources/maven/release-parent-snapshot.json")
+
+
     }
 }

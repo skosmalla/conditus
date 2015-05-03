@@ -1,6 +1,5 @@
 package com.github.skosmalla.conditus
 
-import org.junit.Ignore
 import org.junit.Test
 
 /**
