@@ -1,0 +1,12 @@
+[Unit]
+Description="Sonatype Nexus Repository Manager"
+After=network.target
+
+[Service]
+ExecStart=/home/vagrant/nexus/nexus-2.14.4-03/bin/nexus.sh start
+ExecStop=/home/vagrant/nexus/nexus-2.14.4-03/bin/nexus.sh stop
+PidFile=/var/run/nexus.pid
+User=vagrant
+
+[Install]
+WantedBy=multi-user.target
