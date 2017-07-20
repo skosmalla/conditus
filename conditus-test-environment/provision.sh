@@ -24,6 +24,23 @@ svnadmin load /var/local/svn/conditus < /vagrant/conditus-test-repo.dump
 
 chmod -R a+rwx /var/local/svn
 
+# Git Installation
+apt-get install git git-svn -y
+
+cd /opt
+sudo mkdir conditus.git
+sudo chown vagrant:vagrant conditus.git
+cd conditus.git
+git init
+cd .git
+git --bare update-server-info
+cp hooks/post-update.sample  hooks/post-update
+
+# git url git clone ssh://vagrant@localhost:2222/opt/conditus.git
+# https://stackoverflow.com/questions/16005193/converting-a-local-svn-repo-dump-to-git
+git svn clone file:///var/local/svn/conditus /opt/conditus.git
+
+
 # Java Installation
 apt-get install openjdk-8-jre -y
 
@@ -55,4 +72,4 @@ chown -R vagrant:vagrant *
 chmod a+x -R *
 
 # Start Applications
-service nexus start
+sudo service nexus start
