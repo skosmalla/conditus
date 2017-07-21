@@ -1,7 +1,7 @@
 package com.github.skosmalla.conditus
 
 import com.github.skosmalla.conditus.maven.MavenReleaseWorkflow
-import com.github.skosmalla.conditus.maven.step.ScmCheckoutStep
+import com.github.skosmalla.conditus.scm.step.ScmCheckoutStep
 
 
 class Conditus {

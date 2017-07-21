@@ -1,8 +1,8 @@
-package com.github.skosmalla.conditus.maven.step
+package com.github.skosmalla.conditus.scm.step
 
 import com.github.skosmalla.conditus.CommandLineExecutor
 import com.github.skosmalla.conditus.OsSpecifics
-import com.github.skosmalla.conditus.ScmUrlUtil
+import com.github.skosmalla.conditus.ScmUrl
 import com.github.skosmalla.conditus.exception.StepExecutionException
 
 /**
@@ -11,7 +11,7 @@ import com.github.skosmalla.conditus.exception.StepExecutionException
  */
 class PrepareSvnForTagStep extends PrepareScmStep {
 
-    PrepareSvnForTagStep(String scmUrl) {
+    PrepareSvnForTagStep(ScmUrl scmUrl) {
         super(scmUrl)
     }
 
@@ -47,8 +47,8 @@ class PrepareSvnForTagStep extends PrepareScmStep {
     }
 
     private String createTagUrl() {
-        def repositoryUrl = ScmUrlUtil.getRepositoryUrl(scmUrl)
-        def tagUrl = ScmUrlUtil.replace(repositoryUrl, 'tags')
+        scmUrl.replace('tags')
+        def tagUrl = scmUrl.toString()
         tagUrl
     }
 }

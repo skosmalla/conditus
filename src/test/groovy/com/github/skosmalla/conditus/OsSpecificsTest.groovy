@@ -1,5 +1,6 @@
 package com.github.skosmalla.conditus
 
+import org.junit.Ignore
 import org.junit.Test
 
 /**
@@ -9,6 +10,7 @@ import org.junit.Test
 class OsSpecificsTest {
 
     @Test
+    @Ignore
     void test() {
         OsSpecifics osSpecifics = OsSpecifics.getOsName()
 
